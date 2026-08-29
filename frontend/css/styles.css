@@ -180,3 +180,15 @@ Catalog Section (Css Grid)
     object-position: center 75%; /* Valores tomados por defecto como Center (X), 75% (Y) */
 }
 
+/*============================
+FOOTER
+============================*/
+
+.site-footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #0d0e12;
+    border-top: 5px solid #232730;
+    color: #a0a6b1;
+    font-size: 0.9rem;
+}
