@@ -174,3 +174,9 @@ Catalog Section (Css Grid)
 .button-secondary:hover {
     background-color: #323846;
 }
+
+/* Cambio de posición enfocando al vehículo por problemas de resolución de la foto */
+.car-card .vehiclePosition {
+    object-position: center 75%; /* Valores tomados por defecto como Center (X), 75% (Y) */
+}
+
