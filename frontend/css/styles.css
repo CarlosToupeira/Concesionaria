@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111318;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+/* Contenedor principal del header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #181b21;
+    padding: 20px 40px;
+}
+
+/* Tipografía del logo */
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navegación */
+.main-nav {
+    display: flex;
+    gap: 25px;
+}
+
+/* Enlaces del menú */
+.main-nav a {
+    color: #a0a6b1;
+    text-decoration: none; /* Sacar el subrayado del link */
+    font-weight: 500;
+    transition: color 0.3 ease; /* Transición suave de color */
+}
+
+/* Efecto al pasar el mouse por encima del link */
+.main-nav a:hover {
+    color: #ffffff;
+}
