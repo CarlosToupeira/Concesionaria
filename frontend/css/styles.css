@@ -88,3 +88,89 @@ body {
     background-color: #1d4ed8;
     transform: translateY(-5px); /* Eleva levemente el botón de manera vertical */
 }
+
+/*============================
+Catalog Section (Css Grid)
+============================*/
+
+.catalog {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor de las clases catalog en la pantalla */
+}
+
+.catalog h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+
+}
+
+/* Grilla Responsiva */
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjeta de Auto */
+.car-card {
+    background-color: #181b21;
+    border-radius: 12px;
+    overflow: hidden; /* Mantiene la imagen dentro de las esquinas y respeta el ancho de la descripción de la tarjeta */
+    border: 5px solid #232730;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px); /* Leve elevación vertical al pasar el mouse por cualuier parte de la tarjeta del vehículo */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Imagen del auto */
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Mantiene la proporción de la imagen sin deformarla */
+}
+
+/* Información del auto */
+.car-info {
+    padding: 20px;
+}
+
+.car-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.car-info .specs {
+    font-size: 0.9rem;
+    color: #a0a6b1;
+    margin-bottom: 12px;
+}
+
+.car-info .price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #3b82f6;
+    margin-bottom: 16px;
+}
+
+/* Botón Secundario (Ver detalles) */
+.button-secondary {
+    display: block;
+    text-align: center;
+    background-color: #232730;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.5s ease;
+}
+
+.button-secondary:hover {
+    background-color: #323846;
+}
