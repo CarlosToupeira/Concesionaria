@@ -36,10 +36,10 @@ body {
     color: #a0a6b1;
     text-decoration: none; /* Sacar el subrayado del link */
     font-weight: 500;
-    transition: color 0.3 ease; /* Transición suave de color */
+    transition: color 0.5s ease; /* Transición suave de color */
 }
 
-/* Efecto al pasar el mouse por encima del link */
+/* Efecto al pasar el mouse por encima del link*/
 .main-nav a:hover {
     color: #ffffff;
 }
