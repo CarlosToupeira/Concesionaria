@@ -1,38 +1,3 @@
-// Array de objetos con los datos de los vehículos
-const cars = [
-    {
-        id: 1,
-        name: "Chevrolet Camaro",
-        specs: "2023 • 12.000 km • Nafta",
-        price: "$65.000.000",
-        image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=500"
-    },
-    {
-        id: 2,
-        name: "Ferrari LaFerrari",
-        specs: "2013 • 0 km • Nafta",
-        price: "$120.000.000",
-        image: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=500"
-    },
-    {
-        id: 3,
-        name: "Audi R8 V10",
-        specs: "2015 • 5.000 km • Nafta",
-        price: "$85.000.000",
-        image: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=500"
-    },
-    {
-        id: 4,
-        name: "Ford Mustang Mach 1",
-        specs: "1969 • 18.000 km • Nafta",
-        price: "$55.000.000",
-        image: "https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?w=500",
-    }
-];
-
-// Log de consola para saber que paso
-console.log("Cargando catálogo de autos:", cars);
-
 const container = document.querySelector("#cars-grid");
 
 function renderizarAutos(carList) {
@@ -58,5 +23,18 @@ function renderizarAutos(carList) {
     });
 }
 
-// ejecuto la función con mi arreglo de autos creada
-renderizarAutos(cars);
+//Petición fetch de manera asíncrona (Cuando pueda obtener el archivo JSON genera una respuesta con los datos del JSON, sino genera errores.)
+fetch("js/cars.json")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Error al cargar el archivo JSON");
+        }
+        return response.json(); // Retorna la respuesta de texto JSON a un array de JS
+    })
+    .then(data => {
+        console.log("Datos cargados dinámicamente desde el JSON:", data);
+        renderizarAutos(data) // llamo la funcion con los datos obtenídos correctamente del JSON
+    })
+    .catch(error => {
+        console.error("Hubo un problema con la petición Fetch:", error);
+    });
