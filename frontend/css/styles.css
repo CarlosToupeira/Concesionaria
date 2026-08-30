@@ -175,6 +175,26 @@ Catalog Section (Css Grid)
     background-color: #323846;
 }
 
+.search-container {
+    margin-bottom: 30px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #181b21;
+    border: 5px solid #232730;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.5s ease;
+}
+
+#search-input:focus {
+    border-color: #2563eb; /* Resalta cuando el usuario hace click en el buscador para saber que esta pendiente la búsqueda */
+}
+
 /*============================
 FOOTER
 ============================*/
