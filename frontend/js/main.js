@@ -23,7 +23,7 @@ function renderizarAutos(carList) {
     });
 }
 
-//Petición fetch de manera asíncrona (Cuando pueda obtener el archivo JSON genera una respuesta con los datos del JSON, sino genera errores.)
+//Petición fetch de manera que use Promesas (Cuando pueda obtener el archivo JSON genera una respuesta con los datos del JSON, sino genera errores.)
 fetch("js/cars.json")
     .then(response => {
         if (!response.ok) {
