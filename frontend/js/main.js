@@ -34,14 +34,14 @@ function renderCars(carList) {
 // Carga de autos usando async / await
 async function loadCars() {
     try {
-        const response = await fetch("js/cars.json");
+        const response = await fetch("http://localhost:3000/api/cars"); // Cambio de ruta para que haga peticiones a una API REST del servidor backend
         if (!response.ok) {
-            throw new Error("No se puede obtener el archivo JSON");
+            throw new Error("No se pudieron cargar los datos del servidor");
         }
         globalCarList = await response.json() // Espera que el JSON se convierta a objeto y guarda los datos en globalCarList || Fix error eliminé const porque no dejaba filtrar la lista a marcas o modelos específicos ademas de ser un arreglo global.
         renderCars(globalCarList);
     } catch (error) {
-        console.error("Hubo un problema al cargar los autos:", error);
+        console.error("Hubo un problema al cargar desde la API:", error);
     }
 }
 

@@ -1,2 +1,12 @@
+# Dependencias de Node
 node_modules/
+
+# Variables de entorno importantes
 .env
+
+# Archivos basura del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración del editor Visual Studio code
+.vscode/
